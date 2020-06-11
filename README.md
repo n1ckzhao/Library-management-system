@@ -69,7 +69,7 @@ Database principle experiment
 
 ![pic](/asset/客户账号ER.png)
 
-![pic](/asset/管理员账号.png)
+![pic](/asset/管理员账号ER.png)
 
 ### 3.2 全局E-R图
 
