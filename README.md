@@ -57,7 +57,24 @@ Database principle experiment
 
 ### 2.4 系统数据流图
 
+![pic](/asset/顶层数据流图.png)
+
 ### 2.5 系统数据字典
+
+1. 书籍表
+
+| 字段名 | 字段含义 | 数据类型 | 约束设计 |
+| ------ | ------ | ------ | ------ |
+| Bno | 图书编号 | Char(10) | primary key |
+| title | 书名 | Varchar(40) | not null |
+| price | 价格 | double |  |
+| stock | 库存 | int |  |
+
+2. 购买记录表
+
+| 字段名 | 字段含义 | 数据类型 | 约束设计 |
+| ------ | ------ | ------ | ------ |
+| orNum | 订单号 | Char(10) | 
 
 ## 第3章 系统概念结构设计(E-R图)
 
@@ -72,6 +89,8 @@ Database principle experiment
 ![pic](/asset/管理员账号ER.png)
 
 ### 3.2 全局E-R图
+
+![pic](/asset/全局ER.png)
 
 ## 第4章 系统逻辑结构设计
 
