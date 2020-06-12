@@ -70,11 +70,31 @@ Database principle experiment
 | price | 价格 | double |  |
 | stock | 库存 | int |  |
 
-2. 购买记录表
+2. 订单记录表
 
 | 字段名 | 字段含义 | 数据类型 | 约束设计 |
 | ------ | ------ | ------ | ------ |
-| orNum | 订单号 | Char(10) | 
+| orNum | 订单号 | Char(10) | primary key |
+| name | 顾客姓名 | Varchar(20) |  |
+| time | 时间 | date |  |
+| bookls | 书目 | array |  |
+| pricenum | 总价 | double |  |
+
+3. 顾客表
+
+| 字段名 | 字段含义 | 数据类型 | 约束设计 |
+| ------ | ------ | ------ | ------ |
+| account | 账号 | Char(16) | primary key |
+| gender | 性别 | varchar(2) |  |
+| password | 密码 | char(16) |  |
+| address | 收获地址 | varchar(50) |  |
+| name | 姓名 | varchar(10) |  |
+
+4. 管理员表
+
+| 字段名 | 字段含义 | 数据类型 | 约束设计 |
+| ------ | ------ | ------ | ------ |
+| password | 密码 | char(16) |  |
 
 ## 第3章 系统概念结构设计(E-R图)
 
@@ -96,7 +116,17 @@ Database principle experiment
 
 ### 4.1 逻辑结构（关系数据模型）
 
-### 4.2 规范化设计
+* E-R图向关系模型转化
+  * Book(Bno,title,price,stock)
+  * Record(orNum,name,time,bookls,pricenum)
+  * User(account,password,name,gender,address)
+  * admin(password)
+
+### 4.2 规范化
+
+* 所有表均符合第一范式(1NF)无重复的列
+* 除管理员表外,其余表符合第二范式(2NF)属性完全依赖于主键
+* 所有表符合第三范式(3NF)
 
 ## 第5章 结论
 
